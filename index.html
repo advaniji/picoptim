@@ -113,6 +113,13 @@
           <pre>pip install tqdm</pre>
         </li>
         <li>
+          <strong>Handle Image Orientation (if necessary):</strong> Some images may display incorrectly due to EXIF orientation metadata. To address this:
+          <ul>
+            <li>Use image editing software to rotate and save images correctly.</li>
+            <li>Strip EXIF data using tools like ImageMagick's `convert -autoorient` function to prevent orientation issues. <cite>Source</cite></li>
+          </ul>
+        </li>
+        <li>
           <strong>Run picoptim:</strong> Execute <code>picoptim.py</code> using Python 3:
           <pre>python picoptim.py</pre>
         </li>
@@ -133,25 +140,6 @@
       <p>
         picoptim is a straightforward Python tool designed to optimize JPEG images using the jpegoptim utility. It simplifies the process of reducing image sizes without compromising quality.
       </p>
-      <p>
-        <strong>Credits:</strong> This project utilizes 
-        <a href="https://github.com/tjko/jpegoptim" target="_blank">jpegoptim</a> and 
-        <a href="https://github.com/tqdm/tqdm" target="_blank">tqdm</a>. Special thanks to all developers and contributors.
-      </p>
-      <p>
-        This project is open-source and hosted on GitHub. Contributions and suggestions are welcome.
-      </p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p class="mb-0">© 2025 picoptim. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net
+     
 ::contentReference[oaicite:0]{index=0}
  
