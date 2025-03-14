@@ -87,6 +87,17 @@
               <p class="card-text">Download the jpegoptim binary suitable for your operating system.</p>
               <a href="https://github.com/tjko/jpegoptim/releases/download/1.4.6/jpegoptim-1.4.6-linux-x86-64.tar.gz" class="btn btn-primary" download>Download for Linux</a>
               <a href="https://github.com/tjko/jpegoptim/releases/download/1.4.6/jpegoptim-1.4.6-win32.zip" class="btn btn-primary" download>Download for Windows</a>
+              <p class="mt-2 text-muted">Select the version compatible with your operating system.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Python download card -->
+        <div class="col-md-4 mb-4">
+          <div class="card card-download">
+            <div class="card-body text-center">
+              <h5 class="card-title">Python</h5>
+              <p class="card-text">Ensure Python 3 is installed on your system.</p>
+              <a href="https://www.python.org/downloads/" class="btn btn-primary" target="_blank">Download Python</a>
             </div>
           </div>
         </div>
@@ -113,13 +124,6 @@
           <pre>pip install tqdm</pre>
         </li>
         <li>
-          <strong>Handle Image Orientation (if necessary):</strong> Some images may display incorrectly due to EXIF orientation metadata. To address this:
-          <ul>
-            <li>Use image editing software to rotate and save images correctly.</li>
-            <li>Strip EXIF data using tools like ImageMagick's `convert -autoorient` function to prevent orientation issues. <cite>Source</cite></li>
-          </ul>
-        </li>
-        <li>
           <strong>Run picoptim:</strong> Execute <code>picoptim.py</code> using Python 3:
           <pre>python picoptim.py</pre>
         </li>
@@ -128,18 +132,6 @@
         </li>
       </ol>
       <p>
-        Ensure you have Python 3 installed. For additional details or troubleshooting, please consult the project documentation on GitHub.
-      </p>
-    </div>
-  </section>
-
-  <!-- About & Credits Section -->
-  <section class="py-5" id="about">
-    <div class="container">
-      <h2 class="mb-4 text-center">About & Credits</h2>
-      <p>
-        picoptim is a straightforward Python tool designed to optimize JPEG images using the jpegoptim utility. It simplifies the process of reducing image sizes without compromising quality.
-      </p>
-     
+        Ensure you have Python
 ::contentReference[oaicite:0]{index=0}
  
