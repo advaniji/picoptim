@@ -3,153 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PicOptim - JPEG Optimization Tool</title>
+    <title>PicOptim - Modern JPEG Optimization Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            padding: 2rem;
         }
-        .header {
+
+        .hero {
             text-align: center;
-            color: #333;
-            margin-bottom: 30px;
+            padding: 4rem 0;
         }
-        .section {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: white;
+            color: #764ba2;
+            padding: 1rem 2rem;
+            border-radius: 30px;
         }
+
         .download-btn {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
+            padding: 1rem 2rem;
+            background: white;
+            color: #764ba2;
             text-decoration: none;
-            border-radius: 4px;
-            margin: 10px 0;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 1rem;
+            transition: transform 0.3s ease;
         }
+
         .download-btn:hover {
-            background-color: #45a049;
+            transform: translateY(-3px);
         }
-        .code-btn {
-            background-color: #008CBA;
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
         }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            color: #333;
+        }
+
+        .feature-card i {
+            font-size: 2rem;
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
         .instructions {
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #007bff;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
         }
+
+        .code-block {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
         .warning {
             color: #dc3545;
             font-weight: bold;
         }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to PicOptim</h1>
-        <p>Your Easy-to-Use JPEG Optimization Tool</p>
-    </div>
+    <div class="container">
+        <div class="hero">
+            <h1>PicOptim</h1>
+            <p>Modern JPEG Optimization Tool</p>
+            <a href="https://github.com/advaniji/picoptim/raw/main/picoptim.py" class="download-btn" download="picoptim.py">
+                Download Now
+            </a>
+        </div>
 
-    <div class="section">
-        <h2>Download PicOptim</h2>
-        <p>Get the latest version of PicOptim here:</p>
-        <a href="https://github.com/advaniji/picoptim/raw/main/picoptim.py" class="download-btn" download="picoptim.py">
-            Download picoptim.py
-        </a>
-    </div>
+        <div class="section">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-file-image"></i>
+                    <h3>Lossless Optimization</h3>
+                    <p>Compress images without quality loss</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file-compression"></i>
+                    <h3>Lossy Optimization</h3>
+                    <p>Reduce file size significantly</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-trash"></i>
+                    <h3>Strip Metadata</h3>
+                    <p>Remove unnecessary metadata</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>Parallel Processing</h3>
+                    <p>Optimize multiple images at once</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="section">
-        <h2>Install Dependencies</h2>
-        <p>Install required Python packages using pip:</p>
-        <button class="download-btn code-btn" onclick="copyToClipboard('pip install tqdm psutil argparse')">
-            Copy Install Command
-        </button>
-        <div class="instructions">
-            <ol>
-                <li>Open your terminal or command prompt</li>
-                <li>Paste the command: <code>pip install tqdm psutil argparse</code></li>
-                <li>Press Enter to run the command</li>
-            </ol>
+        <div class="section">
+            <h2>Getting Started</h2>
+            <div class="instructions">
+                <h3>Step 1: Install Dependencies</h3>
+                <p>Run this command in your terminal:</p>
+                <div class="code-block">
+                    pip install tqdm psutil argparse
+                </div>
+
+                <h3>Step 2: Install jpegoptim</h3>
+                <p>Follow these platform-specific instructions:</p>
+                <ul>
+                    <li>Windows: Download from <a href="https://github.com/tjko/jpegoptim/releases" target="_blank">here</a></li>
+                    <li>Linux: Run <code>sudo apt-get install jpegoptim</code></li>
+                    <li>macOS: Run <code>brew install jpegoptim</code></li>
+                </ul>
+
+                <h3>Step 3: Run PicOptim</h3>
+                <p>Use these commands:</p>
+                <div class="code-block">
+                    python picoptim.py /path/to/images --lossy --quality 75 --strip-metadata
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>System Requirements</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Python 3.6+</h3>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>jpegoptim installed</h3>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>pip installed</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Download</h2>
+            <p>Get the latest version of PicOptim:</p>
+            <a href="https://github.com/advaniji/picoptim/raw/main/picoptim.py" class="download-btn" download="picoptim.py">
+                Download PicOptim Script
+            </a>
         </div>
     </div>
 
-    <div class="section">
-        <h2>Install jpegoptim</h2>
-        <p>jpegoptim is required for image optimization. Follow the instructions for your operating system:</p>
-        
-        <div class="instructions">
-            <h3>Windows</h3>
-            <ol>
-                <li>Download the latest jpegoptim release from <a href="https://github.com/tjko/jpegoptim/releases" target="_blank">here</a></li>
-                <li>Extract the zip file</li>
-                <li>Place the jpegoptim.exe file in the same folder as your picoptim.py script</li>
-            </ol>
-            
-            <h3>Linux</h3>
-            <p>Run this command in your terminal:</p>
-            <code>sudo apt-get install jpegoptim</code>
-
-            <h3>macOS (using Homebrew)</h3>
-            <p>Run this command in your terminal:</p>
-            <code>brew install jpegoptim</code>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Get Python</h2>
-        <p>If you don't have Python installed:</p>
-        <a href="https://www.python.org/downloads/" class="download-btn" target="_blank">
-            Download Python
-        </a>
-    </div>
-
-    <div class="section">
-        <h2>Usage Instructions</h2>
-        <div class="instructions">
-            <h3>Basic Usage</h3>
-            <p>Run the script from your terminal:</p>
-            <code>python picoptim.py</code>
-
-            <h3>Options</h3>
-            <ul>
-                <li><code>--lossless</code>: Lossless optimization (no quality reduction)</li>
-                <li><code>--lossy</code>: Lossy optimization (reduce quality)</li>
-                <li><code>--quality [1-100]</code>: Quality setting for lossy optimization</li>
-                <li><code>--strip-metadata</code>: Remove image metadata</li>
-                <li><code>--backup</code>: Create backup files</li>
-                <li><code>--workers [number]</code>: Number of parallel workers</li>
-            </ul>
-
-            <h3>Example</h3>
-            <code>python picoptim.py /path/to/images --lossy --quality 75 --strip-metadata</code>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Credits</h2>
-        <p>This tool uses the following excellent libraries:</p>
+    <footer>
+        <p>Created with ❤️ by Advaniji</p>
+        <p>Special thanks to:</p>
         <ul>
-            <li><a href="https://github.com/tqdm/tqdm" target="_blank">tqdm</a> for progress bars</li>
-            <li><a href="https://github.com/giampaolo/psutil" target="_blank">psutil</a> for system monitoring</li>
-            <li><a href="https://github.com/tjko/jpegoptim" target="_blank">jpegoptim</a> for image optimization</li>
+            <li><a href="https://github.com/tjko/jpegoptim" target="_blank">jpegoptim</a></li>
+            <li><a href="https://github.com/tqdm/tqdm" target="_blank">tqdm</a></li>
+            <li><a href="https://github.com/giampaolo/psutil" target="_blank">psutil</a></li>
         </ul>
-    </div>
-
-    <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-                alert('Command copied to clipboard!');
-            }, function(err) {
-                console.error('Failed to copy text: ', err);
-            });
-        }
-    </script>
+    </footer>
 </body>
 </html>
